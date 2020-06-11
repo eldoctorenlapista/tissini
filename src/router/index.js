@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login'
+import Login from '../views/Login'
+import Dashboard from '../components/Dashboard'
+import Cart from '../views/Cart'
+import Catalog from '../views/Catalog'
 import Category from '../views/Category'
-import About from '../views/About'
 
 Vue.use(VueRouter)
 
@@ -12,14 +14,26 @@ const routes = [
     component: Login
   },
   {
-    path: '/categories',
-    name: 'Categories',
-    component: Category
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard,
+    children: [
+      {
+        path: '/categories',
+        name: 'Category',
+        component: Category
+      },
+      {
+        path: '/cart',
+        name: 'Cart',
+        component: Cart
+      },
+      {
+        path: '/catalog',
+        name: 'Catalog',
+        component: Catalog
+      }
+    ]
   }
 ]
 

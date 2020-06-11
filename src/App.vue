@@ -1,9 +1,7 @@
 <template>
   <v-app>
     <v-content>
-      <router-view>
-        <Login/>
-      </router-view>
+      <router-view />
     </v-content>
   </v-app>
 </template>
@@ -15,12 +13,7 @@
 </style>
 
 <script>
-import Login from './components/Login'
-
 export default {
-  name: 'App',
-  components: {
-    Login
-  }
+  name: 'App'
 }
 </script>
