@@ -17,6 +17,7 @@
         class="pt-6"
         v-model="mobilephone"
         v-on:keyup="login($event)"
+        v-on:change="login($event)"
       ></v-text-field>
       <v-progress-circular
         v-show="preloader"

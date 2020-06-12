@@ -29,7 +29,7 @@ const routes = [
         component: Cart
       },
       {
-        path: '/catalog',
+        path: '/catalog/:catalogId',
         name: 'Catalog',
         component: Catalog
       }
