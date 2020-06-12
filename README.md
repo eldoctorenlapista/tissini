@@ -1,7 +1,9 @@
 # tissini
 
 ## Project setup
+### Instalacion de Vue-CLI
 ```
+npm install -g @vue/cli
 npm install
 ```
 
